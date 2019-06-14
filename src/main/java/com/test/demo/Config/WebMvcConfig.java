@@ -31,10 +31,10 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 
     String gitPath = "";
     //打包后路径和调试时候不一样
-    if (path.getParentFile().getParentFile().toString().indexOf(".jar!") > 0) {
+    if (path.getParentFile().getParentFile().toString().indexOf(".jar!") > 0) { // 打包
         gitPath = path.getParentFile().getParentFile().getParent()+File.separator+"logistics"+File.separator+"resource"+File.separator;
     }
-    else {
+    else { // 调试
         gitPath = "file:\\" + path.getParentFile().getParentFile()+File.separator+"logistics"+File.separator+"resource"+File.separator;
     }
 
